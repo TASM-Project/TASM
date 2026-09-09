@@ -1,5 +1,8 @@
 # TASM: Text-Guided Aesthetic Spectrum Matching for Image Aesthetics Assessment
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Framework: PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org/)
+
 This is the official PyTorch implementation of the paper **"Bridging the Continuous-Discrete Gap: Text-Guided Aesthetic Spectrum Matching for Image Aesthetics Assessment"**.
 
 

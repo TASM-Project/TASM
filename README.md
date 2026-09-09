@@ -2,8 +2,12 @@
 
 This is the official PyTorch implementation of the paper **"Bridging the Continuous-Discrete Gap: Text-Guided Aesthetic Spectrum Matching for Image Aesthetics Assessment"**.
 
+
 ## 📖 Abstract
-Image aesthetics assessment aims to predict human aesthetic preferences from visual content. While recent vision-language models have advanced the field, existing methods often treat attribute annotations as simple numerical targets, under-exploiting linguistic semantics. To bridge the gap between discrete textual anchors and continuous score regression, a text-guided aesthetic spectrum matching (TASM) framework is proposed. The TASM model first converts the numerical attribute scores into a 6-bin semantic spectrum, which utilizes score-conditioned rationales and is structurally defined. Visual representations are then optimized through a unified architecture comprising two phases: macro-level aesthetic adaptation for robust multimodal alignment, and micro-level disentanglement for attribute-specific evaluation. Furthermore, a novel Gaussian-mapped spectrum matching mechanism is introduced, enabling the entire framework to be jointly optimized as an unweighted direct sum. Extensive experiments on standard benchmarks have demonstrated that the TASM model not only delivers competitive holistic aesthetic predictions, but also has explicit, fine-grained interpretability.
+Image aesthetics assessment aims to predict human aesthetic preferences from visual content. While recent vision-language models have advanced the field, existing methods often treat attribute annotations as simple numerical targets, under-exploiting linguistic semantics. To bridge the gap between discrete textual anchors and continuous score regression, a **text-guided aesthetic spectrum matching (TASM)** framework is proposed.
+
+The TASM model first converts the numerical attribute scores into a **6-bin semantic spectrum**, which utilizes score-conditioned rationales and is structurally defined. Visual representations are then optimized through a unified architecture comprising two phases: **macro-level aesthetic adaptation** for robust multimodal alignment, and **micro-level disentanglement** for attribute-specific evaluation. Furthermore, a novel **Gaussian-mapped spectrum matching** mechanism is introduced, enabling the entire framework to be jointly optimized as an unweighted direct sum. Extensive experiments on standard benchmarks have demonstrated that the TASM model not only delivers competitive holistic aesthetic predictions, but also has explicit, fine-grained interpretability.
+
 
 ## 🛠️ Environment Setup
 

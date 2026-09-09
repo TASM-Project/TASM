@@ -28,9 +28,17 @@ conda activate tasm
 pip install -r requirements.txt
 ```
 
+## 📦 Model Zoo & Data Download
+
+The score-conditioned rationales, textual semantic spectrum, and pre-trained weights are packaged and hosted on cloud drives. 
+
+| Resource Package          | Contents                                                                       | Download Link                                                                                         |
+|:--------------------------|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
+| `tasm_release_assets.zip` | `aadb_rationales.jsonl`<br>`aadb_semantic_spectrum.pt`<br>`tasm_aadb_last.pth` | [Google Drive](https://drive.google.com/file/d/1tWr4a4YOHuz-982HLXG2GLVm1_uZuQjW/view?usp=drive_link) |
+
 ## 📁 Data Preparation
 
-Please organize the datasets and language supervision files (Rationales & Semantic Spectrum) as follows:
+Please organize the datasets and downloaded files as follows:
 
 ```text
 TASM/
@@ -43,8 +51,11 @@ TASM/
 │   │   ├── images/
 │   │   ├── train.csv
 │   │   └── test.csv
-│   ├── aadb_rationales.jsonl        # (Provided) Score-conditioned rationales
-│   └── aadb_semantic_spectrum.pt    # (Provided) Textual Semantic Spectrum
+│   ├── aadb_rationales.jsonl        # (Downloaded) 
+│   └── aadb_semantic_spectrum.pt    # (Downloaded) 
+├── weights/
+│   └── stage2_aadb/
+│       └── tasm_aadb_last.pth       # (Downloaded) Pre-trained checkpoint
 ├── models/
 │   └── clip-vit-base-patch16/       # Downloaded huggingface CLIP weights
 ```
@@ -82,7 +93,7 @@ python train_stage2_aadb.py \
 
 ## 📊 Evaluation
 
-To evaluate the trained TASM model on the AADB testing set (reporting Overall SRCC/PLCC and Mean Attribute SRCC):
+If you have downloaded our pre-trained checkpoint `tasm_aadb_last.pth`, you can directly evaluate the model on the AADB testing set (reporting Overall SRCC/PLCC and Mean Attribute SRCC) without training:
 
 ```bash
 python test_stage2_aadb.py \

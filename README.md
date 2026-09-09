@@ -26,7 +26,6 @@ conda activate tasm
 
 # Install dependencies
 pip install -r requirements.txt
-
 ```
 
 ## 📁 Data Preparation
@@ -48,7 +47,6 @@ TASM/
 │   └── aadb_semantic_spectrum.pt    # (Provided) Textual Semantic Spectrum
 ├── models/
 │   └── clip-vit-base-patch16/       # Downloaded huggingface CLIP weights
-
 ```
 
 ## 🚀 Training
@@ -66,7 +64,6 @@ python train_stage1_adaptation.py \
     --out_dir ./weights/stage1 \
     --batch_size 128 \
     --epochs 10
-    
 ```
 
 ### Stage 2: Micro-Level Disentanglement
@@ -81,7 +78,6 @@ python train_stage2_aadb.py \
     --out_dir ./weights/stage2_aadb \
     --batch_size 32 \
     --epochs 5
-
 ```
 
 ## 📊 Evaluation
@@ -94,7 +90,6 @@ python test_stage2_aadb.py \
     --score_csv_test ./data/AADB/test.csv \
     --image_dir ./data/AADB/images \
     --clip_path ./models/clip-vit-base-patch16
-
 ```
 
 ## 📝 License

@@ -75,7 +75,7 @@ def main():
     parser.add_argument("--image_dir", required=True)
     parser.add_argument("--clip_path", required=True)
     parser.add_argument("--stage1_ckpt", default=None)
-    parser.add_argument("--prototype_bank", default=None)
+    parser.add_argument("--semantic_spectrum", default=None)
     parser.add_argument("--out_dir", default="./weights/stage2_aadb")
     parser.add_argument("--save_prefix", default="tasm_aadb")
     parser.add_argument("--batch_size", type=int, default=32)
@@ -99,7 +99,7 @@ def main():
     if args.stage1_ckpt:
         clip_model.load_state_dict(torch.load(args.stage1_ckpt, map_location="cpu").get("clip", {}), strict=False)
 
-    proto_tensor = load_prototype_tensor(args.prototype_bank, args.device) if args.prototype_bank else None
+    proto_tensor = load_prototype_tensor(args.semantic_spectrum, args.device) if args.semantic_spectrum else None
     proto_dim = proto_tensor.size(-1) if proto_tensor is not None else 512
 
     model = TASM_AADB(clip_model, feat_dim=clip_model.config.projection_dim, proto_dim=proto_dim).to(args.device)

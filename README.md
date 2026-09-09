@@ -93,3 +93,7 @@ python test_stage2_aadb.py \
     --clip_path ./models/clip-vit-base-patch16
 
 ```
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

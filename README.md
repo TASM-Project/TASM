@@ -32,9 +32,9 @@ pip install -r requirements.txt
 
 The score-conditioned rationales, textual semantic spectrum, and pre-trained weights are packaged and hosted on cloud drives. 
 
-| Resource Package          | Contents                                                                       | Download Link                                                                                         |
-|:--------------------------|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
-| `tasm_release_assets.zip` | `aadb_rationales.jsonl`<br>`aadb_semantic_spectrum.pt`<br>`tasm_aadb_last.pth` | [Google Drive](https://drive.google.com/file/d/1tWr4a4YOHuz-982HLXG2GLVm1_uZuQjW/view?usp=drive_link) |
+| Resource Package  | Contents                                                                       | Download Link                                                                                         |
+|:------------------|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
+| `tasm_assets.zip` | `aadb_rationales.jsonl`<br>`aadb_semantic_spectrum.pt`<br>`tasm_aadb_last.pth` | [Google Drive](https://drive.google.com/file/d/1tWr4a4YOHuz-982HLXG2GLVm1_uZuQjW/view?usp=drive_link) |
 
 ## 📁 Data Preparation
 
